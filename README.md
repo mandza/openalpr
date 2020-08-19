@@ -1,3 +1,5 @@
+Main Project is not active for few years. There is lot of issues and pushes but almost none solved. This fork aims to be more active and continue development.
+
 openalpr
 ========
 
