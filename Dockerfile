@@ -1,7 +1,7 @@
-from ubuntu:18.04
+from ubuntu:20.04
 
 # Install prerequisites
-run apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+run apt update && DEBIAN_FRONTEND=noninteractive apt install -y \
     build-essential \
     cmake \
     curl \
