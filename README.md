@@ -131,7 +131,7 @@ After cloning this GitHub repository, you should download and extract Tesseract 
 Please follow these detailed compilation guides for your respective operating system:
 
 * [Windows](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Windows))
-* [Ubuntu Linux](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(Ubuntu-Linux))
+* [Ubuntu Linux](https://github.com/mandza/openalpr/wiki/Compilation-(Ubuntu-Linux))
 * [OS X](https://github.com/openalpr/openalpr/wiki/Compilation-instructions-(OS-X))
 * [Android Library](https://github.com/SandroMachado/openalpr-android)
 * [Android Application Sample](https://github.com/sujaybhowmick/OpenAlprDroidApp)
