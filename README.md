@@ -11,10 +11,6 @@ User Guide
 
 OpenALPR includes a command line utility.  Simply typing "alpr [image file path]" is enough to get started recognizing license plate images.
 
-For example, the following output is created by analyzing this image:
-![Plate Image](http://www.openalpr.com/images/demoscreenshots/plate3.png "Input image")
-
-
 
 ```
 user@linux:~/openalpr$ alpr ./samplecar.png
@@ -104,29 +100,33 @@ Install OpenALPR on Ubuntu 20.04 with the following commands:
     
 From Source
 -----------
-Install prerequisites
+
+```
+#Install prerequisites
     sudo apt install libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev
     sudo apt install liblog4cplus-dev libcurl3-dev
 
-If using the daemon, install beanstalkd
+#If using the daemon, install beanstalkd
     sudo apt install beanstalkd
 
-Clone the latest code from GitHub
+#Clone the latest code from GitHub
     git clone https://github.com/mandza/openalpr.git
 
-Setup the build directory
+#Setup the build directory
     cd openalpr/src
     mkdir build
     cd build
 
-setup the compile environment
+#Setup the compile environment
     cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
 
-compile the library
+#Compile the library
     make
 
-Install the binaries/libraries to your local system (prefix is /usr)
+#Install the binaries/libraries to your local system (prefix is /usr)
     sudo make install
+```
+
 
 Documentation
 ---------------
@@ -194,5 +194,3 @@ License
 
 Affero GPLv3
 http://www.gnu.org/licenses/agpl-3.0.html
-
-Commercial-friendly licensing available.  Contact: info@openalpr.com
