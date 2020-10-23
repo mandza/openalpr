@@ -1,11 +1,9 @@
-Main Project is not active for few years. There is lot of issues and pushes but almost none solved. This fork aims to be more active and continue development.
+# Main Project is not active for few years. There is lot of issues and pushes but almost none solved. This fork aims to be more active and continue development.
 
 openalpr
 ========
 
 OpenALPR is an open source *Automatic License Plate Recognition* library written in C++ with bindings in C#, Java, Node.js, Go, and Python.  The library analyzes images and video streams to identify license plates.  The output is the text representation of any license plate characters.
-
-Check out a live online demo here: http://www.openalpr.com/demo-image.html
 
 User Guide
 -----------
@@ -100,9 +98,35 @@ Binaries
 
 Pre-compiled Windows binaries can be downloaded on the [releases page](https://github.com/openalpr/openalpr/releases)
 
-Install OpenALPR on Ubuntu 16.04 with the following commands:
+Install OpenALPR on Ubuntu 20.04 with the following commands:
 
-    sudo apt-get update && sudo apt-get install -y openalpr openalpr-daemon openalpr-utils libopenalpr-dev
+    sudo apt update && sudo apt install -y openalpr openalpr-daemon openalpr-utils libopenalpr-dev
+    
+From Source
+-----------
+Install prerequisites
+    sudo apt install libopencv-dev libtesseract-dev git cmake build-essential libleptonica-dev
+    sudo apt install liblog4cplus-dev libcurl3-dev
+
+If using the daemon, install beanstalkd
+    sudo apt install beanstalkd
+
+Clone the latest code from GitHub
+    git clone https://github.com/mandza/openalpr.git
+
+Setup the build directory
+    cd openalpr/src
+    mkdir build
+    cd build
+
+setup the compile environment
+    cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr -DCMAKE_INSTALL_SYSCONFDIR:PATH=/etc ..
+
+compile the library
+    make
+
+Install the binaries/libraries to your local system (prefix is /usr)
+    sudo make install
 
 Documentation
 ---------------
@@ -146,7 +170,7 @@ Docker
 
 ``` shell
 # Build docker image
-docker build -t openalpr https://github.com/openalpr/openalpr.git
+docker build -t openalpr https://github.com/mandza/openalpr.git
 # Download test image
 wget http://plates.openalpr.com/h786poj.jpg
 # Run alpr on image
